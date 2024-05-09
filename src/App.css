@@ -1,64 +1,79 @@
 * {
-  padding: 0px;
-  margin: 0px;
-
-
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.conatainer {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+}
+
+.container {
   height: 100vh;
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+}
 
+.calc {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center; /* Center the content */
+}
+
+h1 {
+  margin-bottom: 20px; /* Add space below the heading */
+}
+
+input {
+  width: calc(100% - 20px); /* Adjust width for padding */
+  border: none;
+  background-color: #f0f0f0;
+  height: 50px;
+  font-size: 24px;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
 }
 
 button {
-  height: 80px;
-  width: 80px;
-  color: white;
-  background-color:black;
-  font-size: large;
-  
- 
-}
-button:hover{
-  background-color: ;
-  transition: 0.5s;
-}
-.calc{
-box-shadow: rgba(0, 0, 0, 0.9) 0px 20px 90px;
-border: 2px solid black;
-border-radius: 10px;
+  width: calc(25% - 10px); /* Adjust button width */
+  height: 50px;
+  background-color: #6dbb1a;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
 }
 
-
-input{
-  width: 100%;
-  border-style: none;
-  height: 70px;
-  font-weight: 200;
-  border-radius: 10px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  background-color: black;
-  color: white;
-font-size: large;
+button:hover {
+  background-color: #4a8c12;
 }
-h1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  margin-left: 39.4vw;
-  margin-top: 95px;
-  width: 330px;
-  font-weight: 500;
-  font-size: 45px;
-  box-shadow: rgba(0, 0, 0, 0.9) 0px 20px 90px;
-background-color: black;
-color: white;
-border-radius: 10px;
+
+@media screen and (max-width: 768px) {
+  .calc {
+    width: 80%;
+  }
+
+  button {
+    width: calc(20% - 10px); /* Adjust button width */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  input {
+    font-size: 18px;
+  }
+
+  button {
+    width: calc(33.33% - 10px); /* Adjust button width */
+    font-size: 16px;
+  }
 }
